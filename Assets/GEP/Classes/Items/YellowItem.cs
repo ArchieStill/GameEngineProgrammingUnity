@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RedItem : MonoBehaviour, IPickupable
+public class YellowItem : MonoBehaviour, IPickupable
 {
     [SerializeField] Inventory inventory;
 
@@ -14,6 +14,6 @@ public class RedItem : MonoBehaviour, IPickupable
     public void Pickup()
     {
         Destroy(gameObject);
-        inventory.RedItemPickup();
+        inventory.YellowItemPickup();
     }
 }

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
@@ -12,6 +11,8 @@ public class Inventory : MonoBehaviour
     public TMP_Text redText;
     int greenCount = 0;
     public TMP_Text greenText;
+    int yellowCount = 0;
+    public TMP_Text yellowText;
 
     public void BlueItemPickup()
     {
@@ -27,5 +28,11 @@ public class Inventory : MonoBehaviour
     {
         greenCount++;
         greenText.text = greenCount.ToString();
+    }
+
+    public void YellowItemPickup()
+    {
+        yellowCount++;
+        yellowText.text = yellowCount.ToString();
     }
 }
