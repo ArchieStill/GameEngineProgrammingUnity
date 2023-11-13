@@ -11,6 +11,7 @@ public class PlayerCharacterInput : MonoBehaviour
     public bool jump;
     public bool sprint;
     public bool switchState;
+    public bool dropItem;
 
     [Header("Movement Settings")]
     public bool analogMovement;
@@ -45,6 +46,11 @@ public class PlayerCharacterInput : MonoBehaviour
     public void OnSwitchStates(InputValue value)
     {
         FindObjectOfType<StateManager>().toggleIsPlayer();
+    }
+
+    public void OnDropItem(InputValue value)
+    {
+        FindAnyObjectByType<DropItem>().dropItem();
     }
 
     public void MoveInput(Vector2 newMoveDirection)
