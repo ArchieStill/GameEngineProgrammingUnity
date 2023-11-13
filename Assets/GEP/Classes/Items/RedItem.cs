@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class RedItem : MonoBehaviour, IPickupable
 {
-
     [SerializeField] Inventory inventory;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (inventory == null) inventory = FindObjectOfType<Inventory>();

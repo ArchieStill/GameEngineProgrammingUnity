@@ -8,9 +8,7 @@ public class StateManager : MonoBehaviour
     bool isPlayer;
     public bool IsPlayer { get =>  isPlayer; }
 
-    public GameObject UIBackground;
-    public GameObject UIBase;
-    public GameObject UITitle;
+    public GameObject UIInventory;
 
     void Start()
     {
@@ -22,16 +20,12 @@ public class StateManager : MonoBehaviour
         isPlayer = !isPlayer;
         if (isPlayer) 
         {
-            UIBackground.SetActive(false);
-            UIBase.SetActive(false);
-            UITitle.SetActive(false);
+            UIInventory.SetActive(false);
             UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         }
         else
         {
-            UIBackground.SetActive(true);
-            UIBase.SetActive(true);
-            UITitle.SetActive(true);
+            UIInventory.SetActive(true);
             UnityEngine.Cursor.lockState = CursorLockMode.None;
         }
     }
