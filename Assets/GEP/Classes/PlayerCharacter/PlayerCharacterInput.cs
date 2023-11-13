@@ -44,7 +44,6 @@ public class PlayerCharacterInput : MonoBehaviour
 
     public void OnSwitchStates(InputValue value)
     {
-        Debug.Log("SWITCH");
         FindObjectOfType<StateManager>().toggleIsPlayer();
     }
 
