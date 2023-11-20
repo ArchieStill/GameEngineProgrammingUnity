@@ -29,7 +29,6 @@ public class Inventory : MonoBehaviour
         greenCount++;
         greenText.text = greenCount.ToString();
     }
-
     public void YellowItemPickup()
     {
         yellowCount++;

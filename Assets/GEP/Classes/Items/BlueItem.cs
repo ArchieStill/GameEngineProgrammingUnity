@@ -8,7 +8,8 @@ public class BlueItem : MonoBehaviour, IPickupable
 
     void Start()
     {
-        if (inventory == null) inventory = FindObjectOfType<Inventory>();
+        if (inventory == null) 
+            inventory = FindObjectOfType<Inventory>();
     }
 
     public void Pickup()

@@ -11,7 +11,7 @@ public class DropItem : MonoBehaviour
 
     public void dropItem()
     {
-        Instantiate(item, facingDirection, Quaternion.identity);
+        Instantiate(item, player.transform.position + transform.forward + new Vector3 (0,2,0), Quaternion.identity);
     }
 
     /// start by getting direction player's facing, create vector that normalises that direction and add to position
