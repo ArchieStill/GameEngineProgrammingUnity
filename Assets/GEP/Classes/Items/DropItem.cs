@@ -7,13 +7,19 @@ public class DropItem : MonoBehaviour
 {
     public GameObject item;
     public GameObject player;
-    private Vector3 facingDirection;
+    public Inventory inventory;
 
     public void dropItem()
     {
-        Instantiate(item, player.transform.position + transform.forward + new Vector3 (0,2,0), Quaternion.identity);
-    }
+        if(inventory.blueCount > 0)
+        {
+            inventory.blueCount--;
+            inventory.blueText.text = inventory.blueCount.ToString();
+            Instantiate(item, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
+        }
+        else
+        {
 
-    /// start by getting direction player's facing, create vector that normalises that direction and add to position
-    /// https://docs.unity3d.com/Manual/InstantiatingPrefabs.html
+        }
+    }
 }

@@ -391,6 +391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 3537241863547937519, guid: 7eed0628d98cf6f40807f9fa8c243579, type: 3}
   player: {fileID: 368636217}
+  inventory: {fileID: 1783796747}
 --- !u!1001 &407530658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3048,6 +3049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 983b533a4c084cc488aba587ca1ea165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blueCount: 0
   blueText: {fileID: 1834611324}
   redText: {fileID: 1441836289}
   greenText: {fileID: 1556869617}
