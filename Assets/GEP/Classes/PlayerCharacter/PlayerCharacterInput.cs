@@ -48,10 +48,10 @@ public class PlayerCharacterInput : MonoBehaviour
         FindObjectOfType<StateManager>().toggleIsPlayer();
     }
 
-    public void OnDropItem(InputValue value)
-    {
-        FindAnyObjectByType<DropItem>().dropItem();
-    }
+    //public void OnDropItem(InputValue value)
+    //{
+    //    FindAnyObjectByType<DropItem>().dropItem();
+    //}
 
     public void MoveInput(Vector2 newMoveDirection)
     {

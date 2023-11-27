@@ -1427,11 +1427,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 14514341}
     m_Modifications:
-    - target: {fileID: 2413074164053462417, guid: 7eed0628d98cf6f40807f9fa8c243579,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3537241863547937519, guid: 7eed0628d98cf6f40807f9fa8c243579,
         type: 3}
       propertyPath: m_Name
@@ -2556,7 +2551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1541424278
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3801,11 +3796,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 14514341}
     m_Modifications:
-    - target: {fileID: 2413074164053462417, guid: 7eed0628d98cf6f40807f9fa8c243579,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3537241863547937519, guid: 7eed0628d98cf6f40807f9fa8c243579,
         type: 3}
       propertyPath: m_Name
@@ -4813,11 +4803,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 14514341}
     m_Modifications:
-    - target: {fileID: 2413074164053462417, guid: 7eed0628d98cf6f40807f9fa8c243579,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3537241863547937519, guid: 7eed0628d98cf6f40807f9fa8c243579,
         type: 3}
       propertyPath: m_Name

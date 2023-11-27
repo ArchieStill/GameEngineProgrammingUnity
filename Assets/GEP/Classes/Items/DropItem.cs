@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,21 +6,56 @@ using UnityEngine.EventSystems;
 
 public class DropItem : MonoBehaviour
 {
-    public GameObject item;
+    public GameObject blueItem;
+    public GameObject redItem;
+    public GameObject greenItem;
+    public GameObject yellowItem;
+
     public GameObject player;
     public Inventory inventory;
 
-    public void dropItem()
+    public void dropItem(int id)
     {
-        if(inventory.blueCount > 0)
-        {
-            inventory.blueCount--;
-            inventory.blueText.text = inventory.blueCount.ToString();
-            Instantiate(item, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
-        }
-        else
-        {
+        ItemColour colour = (ItemColour)id;
 
+        switch (colour)
+        {
+            case ItemColour.BLUE:
+                if (inventory.blueCount > 0)
+                {
+                    inventory.blueCount--;
+                    inventory.blueText.text = inventory.blueCount.ToString();
+                    Instantiate(blueItem, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
+                }
+                break;
+            case ItemColour.RED:
+                if (inventory.redCount > 0)
+                {
+                    inventory.redCount--;
+                    inventory.redText.text = inventory.redCount.ToString();
+                    Instantiate(redItem, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
+                }
+                break;
+            case ItemColour.GREEN:
+                if (inventory.greenCount > 0)
+                {
+                    inventory.greenCount--;
+                    inventory.greenText.text = inventory.greenCount.ToString();
+                    Instantiate(greenItem, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
+                }
+                break;
+            case ItemColour.YELLOW:
+                if (inventory.yellowCount > 0)
+                {
+                    inventory.yellowCount--;
+                    inventory.yellowText.text = inventory.yellowCount.ToString();
+                    Instantiate(yellowItem, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
+                }
+                break;
+            default: 
+                break;
         }
     }
 }
+
+[Serializable] public enum ItemColour {BLUE =  1, RED = 2, GREEN = 3, YELLOW = 4}

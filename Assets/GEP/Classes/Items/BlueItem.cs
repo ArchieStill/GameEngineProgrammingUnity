@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BlueItem : MonoBehaviour, IPickupable
 {
-    [SerializeField] Inventory inventory;
+    Inventory inventory;
 
     void Start()
     {
-        if (inventory == null) inventory = FindObjectOfType<Inventory>();
+        inventory = FindObjectOfType<Inventory>();
     }
 
     public void Pickup()
