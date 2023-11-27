@@ -237,6 +237,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1957667834}
     m_Modifications:
+    - target: {fileID: -1342116576170705133, guid: b7737481e76f29445b88a90cffabbb83,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2493024326674764058, guid: b7737481e76f29445b88a90cffabbb83,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -316,6 +321,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green Item (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5826721589548423120, guid: b095424d1aba3ba478427dfd099a44a9,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7534585491652069035, guid: b095424d1aba3ba478427dfd099a44a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -389,7 +399,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed213445efed81a4f8d0c62e9f2e58c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 3537241863547937519, guid: 7eed0628d98cf6f40807f9fa8c243579, type: 3}
+  blueItem: {fileID: 3537241863547937519, guid: 7eed0628d98cf6f40807f9fa8c243579,
+    type: 3}
+  redItem: {fileID: 3884328084830800466, guid: 7e8de715e6fdb37439fe1998a7d64877, type: 3}
+  greenItem: {fileID: 890092716412276817, guid: b095424d1aba3ba478427dfd099a44a9,
+    type: 3}
+  yellowItem: {fileID: 3327210114519931770, guid: b7737481e76f29445b88a90cffabbb83,
+    type: 3}
   player: {fileID: 368636217}
   inventory: {fileID: 1783796747}
 --- !u!1001 &407530658
@@ -400,6 +416,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 946684046}
     m_Modifications:
+    - target: {fileID: -5641480184545166059, guid: 7e8de715e6fdb37439fe1998a7d64877,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3884328084830800466, guid: 7e8de715e6fdb37439fe1998a7d64877,
         type: 3}
       propertyPath: m_Name
@@ -828,6 +849,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Green Item (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5826721589548423120, guid: b095424d1aba3ba478427dfd099a44a9,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7534585491652069035, guid: b095424d1aba3ba478427dfd099a44a9,
         type: 3}
@@ -1347,7 +1373,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 909471876}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 368636239}
+        m_TargetAssemblyTypeName: DropItem, Assembly-CSharp
+        m_MethodName: dropItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &909471876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1427,6 +1465,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 14514341}
     m_Modifications:
+    - target: {fileID: 2413074164053462417, guid: 7eed0628d98cf6f40807f9fa8c243579,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3537241863547937519, guid: 7eed0628d98cf6f40807f9fa8c243579,
         type: 3}
       propertyPath: m_Name
@@ -2007,6 +2050,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1957667834}
     m_Modifications:
+    - target: {fileID: -1342116576170705133, guid: b7737481e76f29445b88a90cffabbb83,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2493024326674764058, guid: b7737481e76f29445b88a90cffabbb83,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2362,11 +2410,11 @@ MonoBehaviour:
       - m_Target: {fileID: 368636239}
         m_TargetAssemblyTypeName: DropItem, Assembly-CSharp
         m_MethodName: dropItem
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2497,7 +2545,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1521059295}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 368636239}
+        m_TargetAssemblyTypeName: DropItem, Assembly-CSharp
+        m_MethodName: dropItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1521059295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2551,7 +2611,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1541424278
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2791,7 +2851,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1684920178}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 368636239}
+        m_TargetAssemblyTypeName: DropItem, Assembly-CSharp
+        m_MethodName: dropItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1684920178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3082,8 +3154,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blueCount: 0
   blueText: {fileID: 1834611324}
+  redCount: 0
   redText: {fileID: 1441836289}
+  greenCount: 0
   greenText: {fileID: 1556869617}
+  yellowCount: 0
   yellowText: {fileID: 454126970}
 --- !u!114 &1783796748
 MonoBehaviour:
@@ -3658,6 +3733,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green Item (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5826721589548423120, guid: b095424d1aba3ba478427dfd099a44a9,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7534585491652069035, guid: b095424d1aba3ba478427dfd099a44a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3796,6 +3876,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 14514341}
     m_Modifications:
+    - target: {fileID: 2413074164053462417, guid: 7eed0628d98cf6f40807f9fa8c243579,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3537241863547937519, guid: 7eed0628d98cf6f40807f9fa8c243579,
         type: 3}
       propertyPath: m_Name
@@ -3940,6 +4025,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1957667834}
     m_Modifications:
+    - target: {fileID: -1342116576170705133, guid: b7737481e76f29445b88a90cffabbb83,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2493024326674764058, guid: b7737481e76f29445b88a90cffabbb83,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4012,6 +4102,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Green Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 5826721589548423120, guid: b095424d1aba3ba478427dfd099a44a9,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7534585491652069035, guid: b095424d1aba3ba478427dfd099a44a9,
         type: 3}
@@ -4458,6 +4553,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1957667834}
     m_Modifications:
+    - target: {fileID: -1342116576170705133, guid: b7737481e76f29445b88a90cffabbb83,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2493024326674764058, guid: b7737481e76f29445b88a90cffabbb83,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4526,6 +4626,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 946684046}
     m_Modifications:
+    - target: {fileID: -5641480184545166059, guid: 7e8de715e6fdb37439fe1998a7d64877,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3884328084830800466, guid: 7e8de715e6fdb37439fe1998a7d64877,
         type: 3}
       propertyPath: m_Name
@@ -4803,6 +4908,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 14514341}
     m_Modifications:
+    - target: {fileID: 2413074164053462417, guid: 7eed0628d98cf6f40807f9fa8c243579,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3537241863547937519, guid: 7eed0628d98cf6f40807f9fa8c243579,
         type: 3}
       propertyPath: m_Name
