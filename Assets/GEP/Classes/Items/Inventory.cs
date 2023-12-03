@@ -17,21 +17,21 @@ public class Inventory : MonoBehaviour
     public void BlueItemPickup()
     {
         blueCount++;
-        blueText.text = blueCount.ToString();
+        blueText.text = "x " + blueCount.ToString();
     }
     public void RedItemPickup()
     {
         redCount++;
-        redText.text = redCount.ToString();
+        redText.text = "x " + redCount.ToString();
     }
     public void GreenItemPickup()
     {
         greenCount++;
-        greenText.text = greenCount.ToString();
+        greenText.text = "x " + greenCount.ToString();
     }
     public void YellowItemPickup()
     {
         yellowCount++;
-        yellowText.text = yellowCount.ToString();
+        yellowText.text = "x " + yellowCount.ToString();
     }
 }
