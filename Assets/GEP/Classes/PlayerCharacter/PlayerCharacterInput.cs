@@ -10,8 +10,9 @@ public class PlayerCharacterInput : MonoBehaviour
     public Vector2 look;
     public bool jump;
     public bool sprint;
-    public bool switchState;
+    public bool switch_state;
     public bool dropItem;
+    public bool blue_pressed;
 
     [Header("Movement Settings")]
     public bool analogMovement;
@@ -48,10 +49,32 @@ public class PlayerCharacterInput : MonoBehaviour
         FindObjectOfType<StateManager>().toggleIsPlayer();
     }
 
-    //public void OnDropItem(InputValue value)
-    //{
-    //    FindAnyObjectByType<DropItem>().dropItem();
-    //}
+    public void OnDrop(InputValue value)
+    {
+        if (FindObjectOfType<StateManager>().IsPlayer)
+            FindObjectOfType<Hotbar>().HotbarSwitch();
+    }
+
+    public void OnItem1()
+    {
+        if (FindObjectOfType<StateManager>().IsPlayer)
+            FindObjectOfType<Hotbar>().blueSelected();
+    }
+    public void OnItem2()
+    {
+        if (FindObjectOfType<StateManager>().IsPlayer)
+            FindObjectOfType<Hotbar>().redSelected();
+    }
+    public void OnItem3()
+    {
+        if (FindObjectOfType<StateManager>().IsPlayer)
+            FindObjectOfType<Hotbar>().greenSelected();
+    }
+    public void OnItem4()
+    {
+        if (FindObjectOfType<StateManager>().IsPlayer)
+            FindObjectOfType<Hotbar>().yellowSelected();
+    }
 
     public void MoveInput(Vector2 newMoveDirection)
     {

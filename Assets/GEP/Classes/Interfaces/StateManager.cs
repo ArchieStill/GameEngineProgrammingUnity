@@ -9,6 +9,7 @@ public class StateManager : MonoBehaviour
     public bool IsPlayer { get =>  isPlayer; }
 
     public GameObject UIInventory;
+    public GameObject UIHotbar;
 
     void Start()
     {
@@ -21,11 +22,13 @@ public class StateManager : MonoBehaviour
         if (isPlayer) 
         {
             UIInventory.SetActive(false);
+            UIHotbar.SetActive(true);
             UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         }
         else
         {
             UIInventory.SetActive(true);
+            UIHotbar.SetActive(false);
             UnityEngine.Cursor.lockState = CursorLockMode.None;
         }
     }

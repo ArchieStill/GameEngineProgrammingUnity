@@ -17,15 +17,27 @@ public class ItemText : MonoBehaviour
         switch (colour)
         {
             case TextColour.BLUE:
-                blueText.SetActive(true); 
+                blueText.SetActive(true);
+                redText.SetActive(false);
+                greenText.SetActive(false);
+                yellowText.SetActive(false);
                 break;
-            case TextColour.RED: 
-                redText.SetActive(true); 
+            case TextColour.RED:
+                blueText.SetActive(false);
+                redText.SetActive(true);
+                greenText.SetActive(false);
+                yellowText.SetActive(false);
                 break;
             case TextColour.GREEN:
+                blueText.SetActive(false);
+                redText.SetActive(false);
                 greenText.SetActive(true);
+                yellowText.SetActive(false);
                 break;
             case TextColour.YELLOW:
+                blueText.SetActive(false);
+                redText.SetActive(false);
+                greenText.SetActive(false);
                 yellowText.SetActive(true);
                 break;
         }
