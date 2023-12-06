@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Hotbar : MonoBehaviour
 {
-    public GameObject blueArrow;
-    public GameObject redArrow;
-    public GameObject greenArrow;
-    public GameObject yellowArrow;
+    public GameObject blueSelect;
+    public GameObject redSelect;
+    public GameObject greenSelect;
+    public GameObject yellowSelect;
 
     private int selected_colour = 1;
 
@@ -34,34 +34,34 @@ public class Hotbar : MonoBehaviour
     public void blueSelected()
     {
         selected_colour = 1;
-        blueArrow.SetActive(true);
-        redArrow.SetActive(false);
-        greenArrow.SetActive(false);
-        yellowArrow.SetActive(false);
+        blueSelect.SetActive(true);
+        redSelect.SetActive(false);
+        greenSelect.SetActive(false);
+        yellowSelect.SetActive(false);
     }
     public void redSelected()
     {
         selected_colour = 2;
-        blueArrow.SetActive(false);
-        redArrow.SetActive(true);
-        greenArrow.SetActive(false);
-        yellowArrow.SetActive(false);
+        blueSelect.SetActive(false);
+        redSelect.SetActive(true);
+        greenSelect.SetActive(false);
+        yellowSelect.SetActive(false);
     }
     public void greenSelected()
     {
         selected_colour = 3;
-        blueArrow.SetActive(false);
-        redArrow.SetActive(false);
-        greenArrow.SetActive(true);
-        yellowArrow.SetActive(false);
+        blueSelect.SetActive(false);
+        redSelect.SetActive(false);
+        greenSelect.SetActive(true);
+        yellowSelect.SetActive(false);
     }
     public void yellowSelected()
     {
         selected_colour = 4;
-        blueArrow.SetActive(false);
-        redArrow.SetActive(false);
-        greenArrow.SetActive(false);
-        yellowArrow.SetActive(true);
+        blueSelect.SetActive(false);
+        redSelect.SetActive(false);
+        greenSelect.SetActive(false);
+        yellowSelect.SetActive(true);
     }
 
 
