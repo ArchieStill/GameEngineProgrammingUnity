@@ -25,6 +25,7 @@ public class DropItem : MonoBehaviour
                 {
                     inventory.blueCount--;
                     inventory.blueText.text = "x " + inventory.blueCount.ToString();
+                    inventory.blueHB.text = inventory.blueCount.ToString();
                     Instantiate(blueItem, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
                 }
                 break;
@@ -33,6 +34,7 @@ public class DropItem : MonoBehaviour
                 {
                     inventory.redCount--;
                     inventory.redText.text = "x " + inventory.redCount.ToString();
+                    inventory.redHB.text = inventory.redCount.ToString();
                     Instantiate(redItem, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
                 }
                 break;
@@ -41,6 +43,7 @@ public class DropItem : MonoBehaviour
                 {
                     inventory.greenCount--;
                     inventory.greenText.text = "x " + inventory.greenCount.ToString();
+                    inventory.greenHB.text = inventory.greenCount.ToString();
                     Instantiate(greenItem, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
                 }
                 break;
@@ -49,6 +52,7 @@ public class DropItem : MonoBehaviour
                 {
                     inventory.yellowCount--;
                     inventory.yellowText.text = "x " + inventory.yellowCount.ToString();
+                    inventory.yellowHB.text = inventory.yellowCount.ToString();
                     Instantiate(yellowItem, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
                 }
                 break;
