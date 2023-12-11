@@ -9,6 +9,9 @@ public class StateManager : MonoBehaviour
     public bool IsPlayer { get =>  isPlayer; }
 
     public GameObject UIInventory;
+    public AudioSource audioSource;
+    public AudioClip open;
+    public AudioClip close;
 
     void Start()
     {
@@ -20,11 +23,13 @@ public class StateManager : MonoBehaviour
         isPlayer = !isPlayer;
         if (isPlayer) 
         {
+            audioSource.PlayOneShot(close);
             UIInventory.SetActive(false);
             UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         }
         else
         {
+            audioSource.PlayOneShot(open);
             UIInventory.SetActive(true);
             UnityEngine.Cursor.lockState = CursorLockMode.None;
         }
