@@ -23,13 +23,13 @@ public class StateManager : MonoBehaviour
         isPlayer = !isPlayer;
         if (isPlayer) 
         {
-            audioSource.PlayOneShot(close);
+            audioSource.PlayOneShot(close, 0.7f);
             UIInventory.SetActive(false);
             UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         }
         else
         {
-            audioSource.PlayOneShot(open);
+            audioSource.PlayOneShot(open, 0.7f);
             UIInventory.SetActive(true);
             UnityEngine.Cursor.lockState = CursorLockMode.None;
         }

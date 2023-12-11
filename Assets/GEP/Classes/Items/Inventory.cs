@@ -29,28 +29,28 @@ public class Inventory : MonoBehaviour
 
     public void BlueItemPickup()
     {
-        audioSource.PlayOneShot(bluePickupSound, 0.75f);
+        audioSource.PlayOneShot(bluePickupSound, 0.5f);
         blueCount++;
         blueText.text = "x " + blueCount.ToString();
         blueHB.text = blueCount.ToString();
     }
     public void RedItemPickup()
     {
-        audioSource.PlayOneShot(redPickupSound, 0.75f);
+        audioSource.PlayOneShot(redPickupSound, 0.5f);
         redCount++;
         redText.text = "x " + redCount.ToString();
         redHB.text = redCount.ToString();
     }
     public void GreenItemPickup()
     {
-        audioSource.PlayOneShot(greenPickupSound, 0.75f);
+        audioSource.PlayOneShot(greenPickupSound, 0.5f);
         greenCount++;
         greenText.text = "x " + greenCount.ToString();
         greenHB.text = greenCount.ToString();
     }
     public void YellowItemPickup()
     {
-        audioSource.PlayOneShot(yellowPickupSound, 0.75f);
+        audioSource.PlayOneShot(yellowPickupSound, 0.5f);
         yellowCount++;
         yellowText.text = "x " + yellowCount.ToString();
         yellowHB.text = yellowCount.ToString();

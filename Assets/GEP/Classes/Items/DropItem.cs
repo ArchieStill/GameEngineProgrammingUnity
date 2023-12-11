@@ -31,7 +31,7 @@ public class DropItem : MonoBehaviour
                     inventory.blueText.text = "x " + inventory.blueCount.ToString();
                     inventory.blueHB.text = inventory.blueCount.ToString();
                     Instantiate(blueItem, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
-                    audioSource.PlayOneShot(blueDropSound, 0.8f);
+                    audioSource.PlayOneShot(blueDropSound, 0.5f);
                 }
                 break;
             case ItemColour.RED:
@@ -41,7 +41,7 @@ public class DropItem : MonoBehaviour
                     inventory.redText.text = "x " + inventory.redCount.ToString();
                     inventory.redHB.text = inventory.redCount.ToString();
                     Instantiate(redItem, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
-                    audioSource.PlayOneShot(redDropSound, 0.8f);
+                    audioSource.PlayOneShot(redDropSound, 0.5f);
                 }
                 break;
             case ItemColour.GREEN:
@@ -51,7 +51,7 @@ public class DropItem : MonoBehaviour
                     inventory.greenText.text = "x " + inventory.greenCount.ToString();
                     inventory.greenHB.text = inventory.greenCount.ToString();
                     Instantiate(greenItem, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
-                    audioSource.PlayOneShot(greenDropSound, 0.8f);
+                    audioSource.PlayOneShot(greenDropSound, 0.5f);
                 }
                 break;
             case ItemColour.YELLOW:
@@ -61,7 +61,7 @@ public class DropItem : MonoBehaviour
                     inventory.yellowText.text = "x " + inventory.yellowCount.ToString();
                     inventory.yellowHB.text = inventory.yellowCount.ToString();
                     Instantiate(yellowItem, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
-                    audioSource.PlayOneShot(yellowDropSound, 0.8f);
+                    audioSource.PlayOneShot(yellowDropSound, 0.5f);
                 }
                 break;
             default: 
