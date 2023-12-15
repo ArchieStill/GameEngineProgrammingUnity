@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
+  - Blue
+  - Red
+  - Green
+  - Yellow
   layers:
   - Default
   - TransparentFX

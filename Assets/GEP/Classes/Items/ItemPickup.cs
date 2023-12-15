@@ -6,11 +6,6 @@ public class ItemPickup : MonoBehaviour, IPickupable
 {
     [SerializeField] Inventory inventory;
 
-    public GameObject BlueItem;
-    public GameObject RedItem;
-    public GameObject GreenItem;
-    public GameObject YellowItem;
-
     void Start()
     {
         if (inventory == null)
@@ -20,19 +15,19 @@ public class ItemPickup : MonoBehaviour, IPickupable
     public void Pickup()
     {
         Destroy(gameObject);
-        if (gameObject == BlueItem)
+        if (gameObject.tag == "Blue")
         {
             inventory.BlueItemPickup();
         }
-        else if (gameObject == RedItem)
+        else if (gameObject.tag == "Red")
         {
             inventory.RedItemPickup();
         }
-        else if (gameObject == GreenItem)
+        else if (gameObject.tag == "Green")
         {
             inventory.GreenItemPickup();
         }
-        else if (gameObject == YellowItem)
+        else if (gameObject.tag == "Yellow")
         {
             inventory.YellowItemPickup();
         }

@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 8243559228224400949}
   - component: {fileID: 1808653232490557899}
   - component: {fileID: 1031567022173216644}
-  - component: {fileID: 7668984995278498263}
   - component: {fileID: -5641480184545166059}
+  - component: {fileID: 6708878812648863937}
   m_Layer: 0
   m_Name: Red Item
-  m_TagString: Untagged
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,18 +107,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7668984995278498263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3884328084830800466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a55000f505dc854b8bfcc41b23ae355, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &-5641480184545166059
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -146,3 +134,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6708878812648863937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3884328084830800466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61cc581901703e041a67a86b6386e088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
