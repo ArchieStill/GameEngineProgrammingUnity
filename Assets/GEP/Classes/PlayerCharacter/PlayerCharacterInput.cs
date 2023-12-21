@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public class PlayerCharacterInput : MonoBehaviour
 {
@@ -10,9 +11,9 @@ public class PlayerCharacterInput : MonoBehaviour
     public Vector2 look;
     public bool jump;
     public bool sprint;
-    public bool switch_state;
+    public bool switchState;
     public bool dropItem;
-    public bool blue_pressed;
+    public bool bluePressed;
 
     [Header("Movement Settings")]
     public bool analogMovement;

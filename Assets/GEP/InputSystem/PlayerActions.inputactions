@@ -286,6 +286,17 @@
                 },
                 {
                     "name": "",
+                    "id": "7f976bb8-362d-49e1-88dd-acf0499c3547",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox Controller",
+                    "action": "SwitchStates",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "c3bf79d9-71ae-4790-a520-0181da5a953d",
                     "path": "<Keyboard>/1",
                     "interactions": "",
