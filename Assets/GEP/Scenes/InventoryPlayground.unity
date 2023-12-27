@@ -10615,6 +10615,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 6547613095280147047, guid: 635a77c2f51c1a24c98b98acbb1e1053,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 32.96973
+      objectReference: {fileID: 0}
+    - target: {fileID: 6547613095280147047, guid: 635a77c2f51c1a24c98b98acbb1e1053,
+        type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10693,6 +10703,11 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 8338988565591873055}
+    - target: {fileID: 6610657493722315205, guid: 2d03d89c31c1ccf42a11ca0c990c8e4d,
+        type: 3}
+      propertyPath: m_LookAt
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10715,6 +10730,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225226454402747179, guid: 4df9a87682b4e6647adb52038cc94cab,
+        type: 3}
+      propertyPath: GroundedOffset
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: 8002607922324312474, guid: 4df9a87682b4e6647adb52038cc94cab,
         type: 3}
