@@ -52,29 +52,81 @@ public class PlayerCharacterInput : MonoBehaviour
 
     public void OnDrop(InputValue value)
     {
-        if (FindObjectOfType<StateManager>().IsPlayer)
-            FindObjectOfType<Hotbar>().HotbarSwitch();
+        FindObjectOfType<SelectItem>().DropByButton();
     }
 
     public void OnItem1()
     {
         if (FindObjectOfType<StateManager>().IsPlayer)
-            FindObjectOfType<Hotbar>().blueSelected();
+        {
+            FindObjectOfType<SelectItem>().selectedColour = 1;
+            FindObjectOfType<SelectItem>().selectItem();
+        }
     }
     public void OnItem2()
     {
         if (FindObjectOfType<StateManager>().IsPlayer)
-            FindObjectOfType<Hotbar>().redSelected();
+        {
+            FindObjectOfType<SelectItem>().selectedColour = 2;
+            FindObjectOfType<SelectItem>().selectItem();
+        }
     }
     public void OnItem3()
     {
         if (FindObjectOfType<StateManager>().IsPlayer)
-            FindObjectOfType<Hotbar>().greenSelected();
+        {
+            FindObjectOfType<SelectItem>().selectedColour = 3;
+            FindObjectOfType<SelectItem>().selectItem();
+        }
     }
     public void OnItem4()
     {
         if (FindObjectOfType<StateManager>().IsPlayer)
-            FindObjectOfType<Hotbar>().yellowSelected();
+        {
+            FindObjectOfType<SelectItem>().selectedColour = 4;
+            FindObjectOfType<SelectItem>().selectItem();
+        }
+    }
+
+    public void OnHBLeft()
+    {
+        if (FindObjectOfType<StateManager>().IsPlayer)
+        {
+            FindObjectOfType<SelectItem>().selectedColour--;
+            if (FindObjectOfType<SelectItem>().selectedColour < 1)
+                FindObjectOfType<SelectItem>().selectedColour = 1;
+            FindObjectOfType<SelectItem>().selectItem();
+        }
+    }
+    public void OnHBRight()
+    {
+        if (FindObjectOfType<StateManager>().IsPlayer)
+        {
+            FindObjectOfType<SelectItem>().selectedColour++;
+            if (FindObjectOfType<SelectItem>().selectedColour > 4)
+                FindObjectOfType<SelectItem>().selectedColour = 4;
+            FindObjectOfType<SelectItem>().selectItem();
+        }
+    }
+    public void OnIVLeft()
+    {
+        if (FindObjectOfType<StateManager>().IsPlayer == false)
+        {
+            FindObjectOfType<SelectItem>().selectedColour--;
+            if (FindObjectOfType<SelectItem>().selectedColour < 1)
+                FindObjectOfType<SelectItem>().selectedColour = 1;
+            FindObjectOfType<SelectItem>().selectItem();
+        }
+    }
+    public void OnIVRight()
+    {
+        if (FindObjectOfType<StateManager>().IsPlayer == false)
+        {
+            FindObjectOfType<SelectItem>().selectedColour++;
+            if (FindObjectOfType<SelectItem>().selectedColour > 4)
+                FindObjectOfType<SelectItem>().selectedColour = 4;
+            FindObjectOfType<SelectItem>().selectItem();
+        }
     }
 
     public void MoveInput(Vector2 newMoveDirection)
