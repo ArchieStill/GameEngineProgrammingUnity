@@ -63,6 +63,6 @@ public class ItemText : MonoBehaviour
                 break;
         }
     }
-}
 
-[Serializable] public enum TextColour {BLUE = 1, RED = 2, GREEN = 3, YELLOW = 4}
+    [Serializable] public enum TextColour { BLUE = 1, RED = 2, GREEN = 3, YELLOW = 4 }
+}

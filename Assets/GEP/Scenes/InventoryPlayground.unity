@@ -507,7 +507,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 368636250}
+        - m_Target: {fileID: 1204929340}
           m_TargetAssemblyTypeName: ItemText, Assembly-CSharp
           m_MethodName: textActive
           m_Mode: 3
@@ -523,7 +523,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 368636250}
+        - m_Target: {fileID: 1204929340}
           m_TargetAssemblyTypeName: ItemText, Assembly-CSharp
           m_MethodName: textInactive
           m_Mode: 3
@@ -1993,22 +1993,6 @@ MonoBehaviour:
   yellowDropSound: {fileID: 8300000, guid: 412a52a7b31ed4a4998121a97f3b85ff, type: 3}
   player: {fileID: 368636217}
   inventory: {fileID: 1783796747}
---- !u!114 &368636250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 368636217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 476dd9fcd2441274f82142ae621b59c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blueText: {fileID: 1922010635}
-  redText: {fileID: 302561826}
-  greenText: {fileID: 627229984}
-  yellowText: {fileID: 758856148}
 --- !u!4 &368636260 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8002607922324312474, guid: 4df9a87682b4e6647adb52038cc94cab,
@@ -2474,7 +2458,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 368636250}
+        - m_Target: {fileID: 1204929340}
           m_TargetAssemblyTypeName: ItemText, Assembly-CSharp
           m_MethodName: textActive
           m_Mode: 3
@@ -2490,7 +2474,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 368636250}
+        - m_Target: {fileID: 1204929340}
           m_TargetAssemblyTypeName: ItemText, Assembly-CSharp
           m_MethodName: textInactive
           m_Mode: 3
@@ -4562,7 +4546,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 368636250}
+        - m_Target: {fileID: 1204929340}
           m_TargetAssemblyTypeName: ItemText, Assembly-CSharp
           m_MethodName: textActive
           m_Mode: 3
@@ -4574,11 +4558,23 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1783796748}
+          m_TargetAssemblyTypeName: SelectItem, Assembly-CSharp
+          m_MethodName: selectItem
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 368636250}
+        - m_Target: {fileID: 1204929340}
           m_TargetAssemblyTypeName: ItemText, Assembly-CSharp
           m_MethodName: textInactive
           m_Mode: 3
@@ -6119,6 +6115,7 @@ GameObject:
   - component: {fileID: 1204929339}
   - component: {fileID: 1204929338}
   - component: {fileID: 1204929337}
+  - component: {fileID: 1204929340}
   m_Layer: 5
   m_Name: TextCanvas
   m_TagString: Untagged
@@ -6209,6 +6206,22 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1204929340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204929335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 476dd9fcd2441274f82142ae621b59c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blueText: {fileID: 1922010635}
+  redText: {fileID: 302561826}
+  greenText: {fileID: 627229984}
+  yellowText: {fileID: 758856148}
 --- !u!4 &1208729539 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2493024326674764058, guid: b7737481e76f29445b88a90cffabbb83,
@@ -8627,6 +8640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedColour: 1
+  text: {fileID: 1204929340}
   HBBlueSelect: {fileID: 397302477}
   HBRedSelect: {fileID: 1610107139}
   HBGreenSelect: {fileID: 1023626065}
@@ -10205,7 +10219,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 368636250}
+        - m_Target: {fileID: 1204929340}
           m_TargetAssemblyTypeName: ItemText, Assembly-CSharp
           m_MethodName: textActive
           m_Mode: 3
@@ -10221,7 +10235,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 368636250}
+        - m_Target: {fileID: 1204929340}
           m_TargetAssemblyTypeName: ItemText, Assembly-CSharp
           m_MethodName: textInactive
           m_Mode: 3
@@ -10769,10 +10783,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 368636239}
-    - targetCorrespondingSourceObject: {fileID: 7225226454402747168, guid: 4df9a87682b4e6647adb52038cc94cab,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 368636250}
   m_SourcePrefab: {fileID: 100100000, guid: 4df9a87682b4e6647adb52038cc94cab, type: 3}
 --- !u!1001 &6619759313888731785
 PrefabInstance:

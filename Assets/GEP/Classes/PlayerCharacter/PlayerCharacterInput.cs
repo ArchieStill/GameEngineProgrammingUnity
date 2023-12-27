@@ -60,7 +60,7 @@ public class PlayerCharacterInput : MonoBehaviour
         if (FindObjectOfType<StateManager>().IsPlayer)
         {
             FindObjectOfType<SelectItem>().selectedColour = 1;
-            FindObjectOfType<SelectItem>().selectItem();
+            FindObjectOfType<SelectItem>().selectItem(1);
         }
     }
     public void OnItem2()
@@ -68,7 +68,7 @@ public class PlayerCharacterInput : MonoBehaviour
         if (FindObjectOfType<StateManager>().IsPlayer)
         {
             FindObjectOfType<SelectItem>().selectedColour = 2;
-            FindObjectOfType<SelectItem>().selectItem();
+            FindObjectOfType<SelectItem>().selectItem(2);
         }
     }
     public void OnItem3()
@@ -76,7 +76,7 @@ public class PlayerCharacterInput : MonoBehaviour
         if (FindObjectOfType<StateManager>().IsPlayer)
         {
             FindObjectOfType<SelectItem>().selectedColour = 3;
-            FindObjectOfType<SelectItem>().selectItem();
+            FindObjectOfType<SelectItem>().selectItem(3);
         }
     }
     public void OnItem4()
@@ -84,7 +84,7 @@ public class PlayerCharacterInput : MonoBehaviour
         if (FindObjectOfType<StateManager>().IsPlayer)
         {
             FindObjectOfType<SelectItem>().selectedColour = 4;
-            FindObjectOfType<SelectItem>().selectItem();
+            FindObjectOfType<SelectItem>().selectItem(4);
         }
     }
 
@@ -92,40 +92,32 @@ public class PlayerCharacterInput : MonoBehaviour
     {
         if (FindObjectOfType<StateManager>().IsPlayer)
         {
-            FindObjectOfType<SelectItem>().selectedColour--;
-            if (FindObjectOfType<SelectItem>().selectedColour < 1)
-                FindObjectOfType<SelectItem>().selectedColour = 1;
-            FindObjectOfType<SelectItem>().selectItem();
+            FindObjectOfType<SelectItem>().LastItem();
+            FindObjectOfType<SelectItem>().selectItem(FindObjectOfType<SelectItem>().selectedColour);
         }
     }
     public void OnHBRight()
     {
         if (FindObjectOfType<StateManager>().IsPlayer)
         {
-            FindObjectOfType<SelectItem>().selectedColour++;
-            if (FindObjectOfType<SelectItem>().selectedColour > 4)
-                FindObjectOfType<SelectItem>().selectedColour = 4;
-            FindObjectOfType<SelectItem>().selectItem();
+            FindObjectOfType<SelectItem>().NextItem();
+            FindObjectOfType<SelectItem>().selectItem(FindObjectOfType<SelectItem>().selectedColour);
         }
     }
     public void OnIVLeft()
     {
         if (FindObjectOfType<StateManager>().IsPlayer == false)
         {
-            FindObjectOfType<SelectItem>().selectedColour--;
-            if (FindObjectOfType<SelectItem>().selectedColour < 1)
-                FindObjectOfType<SelectItem>().selectedColour = 1;
-            FindObjectOfType<SelectItem>().selectItem();
+            FindObjectOfType<SelectItem>().LastItem();
+            FindObjectOfType<SelectItem>().selectItem(FindObjectOfType<SelectItem>().selectedColour);
         }
     }
     public void OnIVRight()
     {
         if (FindObjectOfType<StateManager>().IsPlayer == false)
         {
-            FindObjectOfType<SelectItem>().selectedColour++;
-            if (FindObjectOfType<SelectItem>().selectedColour > 4)
-                FindObjectOfType<SelectItem>().selectedColour = 4;
-            FindObjectOfType<SelectItem>().selectItem();
+            FindObjectOfType<SelectItem>().NextItem();
+            FindObjectOfType<SelectItem>().selectItem(FindObjectOfType<SelectItem>().selectedColour);
         }
     }
 

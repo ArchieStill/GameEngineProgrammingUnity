@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class SelectItem : MonoBehaviour
 {
     public int selectedColour = 1;
+    public ItemText text;
 
     public GameObject HBBlueSelect;
     public GameObject HBRedSelect;
@@ -36,11 +38,13 @@ public class SelectItem : MonoBehaviour
         }
     }
 
-    public void selectItem()
+    public void selectItem(int select)
     {
-        switch (selectedColour) 
+        SelectedColour colour = (SelectedColour)select;
+
+        switch (colour) 
         {
-            case 1:
+            case SelectedColour.BLUE:
                 HBBlueSelect.SetActive(true);
                 HBRedSelect.SetActive(false);
                 HBGreenSelect.SetActive(false);
@@ -49,8 +53,9 @@ public class SelectItem : MonoBehaviour
                 IVRedSelect.SetActive(false);
                 IVGreenSelect.SetActive(false);
                 IVYellowSelect.SetActive(false);
+                text.textActive((int)ItemText.TextColour.BLUE);
                 break;
-            case 2:
+            case SelectedColour.RED:
                 HBBlueSelect.SetActive(false);
                 HBRedSelect.SetActive(true);
                 HBGreenSelect.SetActive(false);
@@ -59,8 +64,9 @@ public class SelectItem : MonoBehaviour
                 IVRedSelect.SetActive(true);
                 IVGreenSelect.SetActive(false);
                 IVYellowSelect.SetActive(false);
+                text.textActive((int)ItemText.TextColour.RED);
                 break;
-            case 3:
+            case SelectedColour.GREEN:
                 HBBlueSelect.SetActive(false);
                 HBRedSelect.SetActive(false);
                 HBGreenSelect.SetActive(true);
@@ -69,8 +75,9 @@ public class SelectItem : MonoBehaviour
                 IVRedSelect.SetActive(false);
                 IVGreenSelect.SetActive(true);
                 IVYellowSelect.SetActive(false);
+                text.textActive((int)ItemText.TextColour.GREEN);
                 break;
-            case 4:
+            case SelectedColour.YELLOW:
                 HBBlueSelect.SetActive(false);
                 HBRedSelect.SetActive(false);
                 HBGreenSelect.SetActive(false);
@@ -79,11 +86,27 @@ public class SelectItem : MonoBehaviour
                 IVRedSelect.SetActive(false);
                 IVGreenSelect.SetActive(false);
                 IVYellowSelect.SetActive(true);
+                text.textActive((int)ItemText.TextColour.YELLOW);
                 break;
             default:
                 break;
         }
     }
+
+    public void LastItem()
+    {
+        FindObjectOfType<SelectItem>().selectedColour--;
+        if (FindObjectOfType<SelectItem>().selectedColour < 1)
+            FindObjectOfType<SelectItem>().selectedColour = 1;
+    }
+    public void NextItem()
+    {
+        FindObjectOfType<SelectItem>().selectedColour++;
+        if (FindObjectOfType<SelectItem>().selectedColour > 4)
+            FindObjectOfType<SelectItem>().selectedColour = 4;
+    }    
+
+    [Serializable] public enum SelectedColour { BLUE = 1, RED = 2, GREEN = 3, YELLOW = 4 }
 
     // Initially in the player input script I had each of the Item1 Item2 etc inputs call
     // one of these functions, but I changed it so it calls a single function with a switch
