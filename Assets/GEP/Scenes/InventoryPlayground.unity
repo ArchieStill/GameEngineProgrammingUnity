@@ -391,9 +391,9 @@ RectTransform:
   - {fileID: 1265911611}
   m_Father: {fileID: 968806230}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 570, y: -90}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 180, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &49671450
@@ -597,7 +597,7 @@ GameObject:
   - component: {fileID: 82862717}
   - component: {fileID: 82862716}
   m_Layer: 5
-  m_Name: BlueSelect
+  m_Name: Selected1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -887,10 +887,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Keyboard/Mouse: Click on an item to drop it
+  m_text: 'Keyboard/Mouse: Click on an item, or select an item with arrow keys and
+    press Q to drop it
 
-    Controller: Left/Right
-    on the D-Pad to select an item and B/Circle to drop it'
+    Controller: Left/Right on the D-Pad to select an item
+    and B/Circle to drop it'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1243,7 +1244,7 @@ GameObject:
   - component: {fileID: 233205934}
   - component: {fileID: 233205933}
   m_Layer: 5
-  m_Name: YellowSelect
+  m_Name: Selected4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2150,7 +2151,7 @@ GameObject:
   - component: {fileID: 397302480}
   - component: {fileID: 397302479}
   m_Layer: 5
-  m_Name: BlueSelect
+  m_Name: Selected1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2481,9 +2482,9 @@ RectTransform:
   - {fileID: 1440496487}
   m_Father: {fileID: 968806230}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 810, y: -90}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 180, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &484103746
@@ -2650,7 +2651,7 @@ GameObject:
   - component: {fileID: 507444249}
   - component: {fileID: 507444248}
   m_Layer: 5
-  m_Name: IconsCanvas
+  m_Name: HBIconsCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4569,9 +4570,9 @@ RectTransform:
   - {fileID: 364944469}
   m_Father: {fileID: 968806230}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 90, y: -90}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 180, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &946880219
@@ -4956,7 +4957,7 @@ GameObject:
   - component: {fileID: 953171446}
   - component: {fileID: 953171445}
   m_Layer: 5
-  m_Name: RedSelect
+  m_Name: Selected2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5148,7 +5149,7 @@ GameObject:
   - component: {fileID: 968806232}
   - component: {fileID: 968806231}
   m_Layer: 5
-  m_Name: IconsPanel
+  m_Name: IVIconsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5253,7 +5254,7 @@ GameObject:
   - component: {fileID: 981691200}
   - component: {fileID: 981691199}
   m_Layer: 5
-  m_Name: GreenSelect
+  m_Name: Selected3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5401,7 +5402,7 @@ GameObject:
   - component: {fileID: 1023626068}
   - component: {fileID: 1023626067}
   m_Layer: 5
-  m_Name: GreenSelect
+  m_Name: Selected3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5481,7 +5482,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1027462339
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5994,7 +5995,7 @@ GameObject:
   - component: {fileID: 1149069308}
   - component: {fileID: 1149069307}
   m_Layer: 5
-  m_Name: IconsPanel
+  m_Name: HBIconsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6040,14 +6041,14 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
-  m_Spacing: 55
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildAlignment: 4
+  m_Spacing: 60
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
+  m_ChildScaleWidth: 1
+  m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
 --- !u!114 &1149069308
 MonoBehaviour:
@@ -6391,7 +6392,7 @@ GameObject:
   - component: {fileID: 1239118824}
   - component: {fileID: 1239118823}
   m_Layer: 5
-  m_Name: YellowSelect
+  m_Name: Selected4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8222,7 +8223,7 @@ GameObject:
   - component: {fileID: 1610107142}
   - component: {fileID: 1610107141}
   m_Layer: 5
-  m_Name: RedSelect
+  m_Name: Selected2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8545,7 +8546,7 @@ GameObject:
   - component: {fileID: 1733269113}
   - component: {fileID: 1733269112}
   m_Layer: 5
-  m_Name: IconsCanvas
+  m_Name: IVIconsCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10244,9 +10245,9 @@ RectTransform:
   - {fileID: 919007532}
   m_Father: {fileID: 968806230}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 330, y: -90}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 180, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2095339879

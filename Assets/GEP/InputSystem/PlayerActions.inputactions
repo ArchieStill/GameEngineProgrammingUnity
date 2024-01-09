@@ -410,11 +410,33 @@
                 },
                 {
                     "name": "",
+                    "id": "cb363351-24a7-4df0-81e0-69ffa20a97c7",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "IVLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "53e62322-d7a2-4ff4-a32e-dcaf5adc1dd9",
                     "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
+                    "action": "IVRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "86398b44-c987-4356-8be3-a1149a967fa4",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
                     "action": "IVRight",
                     "isComposite": false,
                     "isPartOfComposite": false
