@@ -12,21 +12,53 @@ public class Inventory : MonoBehaviour
     public TMP_Text blueText;
     public TMP_Text blueHB;
     public AudioClip bluePickup;
+    public GameObject IVBlueIcon;
+    public GameObject HBBlueIcon;
 
     public int redCount = 0;
     public TMP_Text redText;
     public TMP_Text redHB;
     public AudioClip redPickup;
+    public GameObject IVRedIcon;
+    public GameObject HBRedIcon;
 
     public int greenCount = 0;
     public TMP_Text greenText;
     public TMP_Text greenHB;
     public AudioClip greenPickup;
+    public GameObject IVGreenIcon;
+    public GameObject HBGreenIcon;
 
     public int yellowCount = 0;
     public TMP_Text yellowText;
     public TMP_Text yellowHB;
     public AudioClip yellowPickup;
+    public GameObject IVYellowIcon;
+    public GameObject HBYellowIcon;
+
+    private void Update()
+    {
+        while (blueCount > 0)
+        {
+            IVBlueIcon.SetActive(true);
+            HBBlueIcon.SetActive(true);
+        }
+        while (redCount > 0)
+        {
+            IVRedIcon.SetActive(true);
+            HBRedIcon.SetActive(true);
+        }
+        while (greenCount > 0)
+        {
+            IVGreenIcon.SetActive(true);
+            HBGreenIcon.SetActive(true);
+        }
+        while (yellowCount > 0)
+        {
+            IVYellowIcon.SetActive(true);
+            HBYellowIcon.SetActive(true);
+        }
+    }
 
     public void BlueItemPickup()
     {

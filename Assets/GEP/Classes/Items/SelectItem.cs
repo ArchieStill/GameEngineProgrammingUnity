@@ -8,6 +8,7 @@ public class SelectItem : MonoBehaviour
     public int selectedColour = 1;
     public ItemText text;
 
+    public GameObject[] Select1;
     public GameObject HBBlueSelect;
     public GameObject HBRedSelect;
     public GameObject HBGreenSelect;
@@ -49,7 +50,6 @@ public class SelectItem : MonoBehaviour
                 HBRedSelect.SetActive(false);
                 HBGreenSelect.SetActive(false);
                 HBYellowSelect.SetActive(false);
-                IVBlueSelect.SetActive(true);
                 IVRedSelect.SetActive(false);
                 IVGreenSelect.SetActive(false);
                 IVYellowSelect.SetActive(false);
@@ -104,7 +104,7 @@ public class SelectItem : MonoBehaviour
         FindObjectOfType<SelectItem>().selectedColour++;
         if (FindObjectOfType<SelectItem>().selectedColour > 4)
             FindObjectOfType<SelectItem>().selectedColour = 4;
-    }    
+    }
 
     [Serializable] public enum SelectedColour { BLUE = 1, RED = 2, GREEN = 3, YELLOW = 4 }
 
