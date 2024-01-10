@@ -9,6 +9,9 @@ TagManager:
   - Red
   - Green
   - Yellow
+  - Select1
+  - BlueIcon
+  - Purple
   layers:
   - Default
   - TransparentFX

@@ -7,68 +7,56 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public AudioSource audioSource;
+    public int pickupOrder = 0;
 
     public int blueCount = 0;
     public TMP_Text blueText;
     public TMP_Text blueHB;
     public AudioClip bluePickup;
-    public GameObject IVBlueIcon;
-    public GameObject HBBlueIcon;
 
     public int redCount = 0;
     public TMP_Text redText;
     public TMP_Text redHB;
     public AudioClip redPickup;
-    public GameObject IVRedIcon;
-    public GameObject HBRedIcon;
 
     public int greenCount = 0;
     public TMP_Text greenText;
     public TMP_Text greenHB;
     public AudioClip greenPickup;
-    public GameObject IVGreenIcon;
-    public GameObject HBGreenIcon;
 
     public int yellowCount = 0;
     public TMP_Text yellowText;
     public TMP_Text yellowHB;
     public AudioClip yellowPickup;
-    public GameObject IVYellowIcon;
-    public GameObject HBYellowIcon;
+
+    public int purpleCount = 0;
+    public TMP_Text purpleText;
+    public TMP_Text purpleHB;
+    public AudioClip purplePickup;
 
     private void Update()
     {
-        while (blueCount > 0)
-        {
-            IVBlueIcon.SetActive(true);
-            HBBlueIcon.SetActive(true);
-        }
-        while (redCount > 0)
-        {
-            IVRedIcon.SetActive(true);
-            HBRedIcon.SetActive(true);
-        }
-        while (greenCount > 0)
-        {
-            IVGreenIcon.SetActive(true);
-            HBGreenIcon.SetActive(true);
-        }
-        while (yellowCount > 0)
-        {
-            IVYellowIcon.SetActive(true);
-            HBYellowIcon.SetActive(true);
-        }
+        Debug.Log(pickupOrder);
+        if (pickupOrder < 0)
+            pickupOrder = 0;
     }
 
     public void BlueItemPickup()
     {
-        audioSource.PlayOneShot(bluePickup, 0.5f);
-        blueCount++;
-        blueText.text = "x " + blueCount.ToString();
-        blueHB.text = blueCount.ToString();
+        if (blueCount == 0 && pickupOrder != 4)
+            pickupOrder++;
+        if (pickupOrder != 4)
+        {
+            audioSource.PlayOneShot(bluePickup, 0.5f);
+            blueCount++;
+            blueText.text = "x " + blueCount.ToString();
+            blueHB.text = blueCount.ToString();
+        }
     }
     public void RedItemPickup()
     {
+        if (redCount == 0)
+            pickupOrder++;
         audioSource.PlayOneShot(redPickup, 0.5f);
         redCount++;
         redText.text = "x " + redCount.ToString();
@@ -76,6 +64,8 @@ public class Inventory : MonoBehaviour
     }
     public void GreenItemPickup()
     {
+        if (greenCount == 0)
+            pickupOrder++;
         audioSource.PlayOneShot(greenPickup, 0.5f);
         greenCount++;
         greenText.text = "x " + greenCount.ToString();
@@ -83,9 +73,19 @@ public class Inventory : MonoBehaviour
     }
     public void YellowItemPickup()
     {
+        if (yellowCount == 0)
+            pickupOrder++;
         audioSource.PlayOneShot(yellowPickup, 0.5f);
         yellowCount++;
         yellowText.text = "x " + yellowCount.ToString();
         yellowHB.text = yellowCount.ToString();
+    }
+    public void PurpleItemPickup()
+    {
+        if (purpleCount == 0)
+            pickupOrder++;
+        purpleCount++;
+        purpleText.text = "x " + purpleCount.ToString();
+        purpleHB.text = purpleCount.ToString();
     }
 }

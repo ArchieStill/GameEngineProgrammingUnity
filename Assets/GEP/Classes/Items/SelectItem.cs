@@ -50,6 +50,7 @@ public class SelectItem : MonoBehaviour
                 HBRedSelect.SetActive(false);
                 HBGreenSelect.SetActive(false);
                 HBYellowSelect.SetActive(false);
+                IVBlueSelect.SetActive(true);
                 IVRedSelect.SetActive(false);
                 IVGreenSelect.SetActive(false);
                 IVYellowSelect.SetActive(false);

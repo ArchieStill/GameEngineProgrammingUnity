@@ -32,6 +32,8 @@ public class DropItem : MonoBehaviour
                     inventory.blueHB.text = inventory.blueCount.ToString();
                     Instantiate(blueItem, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
                     audioSource.PlayOneShot(blueDropSound, 0.5f);
+                    if (inventory.blueCount == 0)
+                        inventory.pickupOrder--;
                 }
                 break;
             case ItemColour.RED:
@@ -42,6 +44,8 @@ public class DropItem : MonoBehaviour
                     inventory.redHB.text = inventory.redCount.ToString();
                     Instantiate(redItem, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
                     audioSource.PlayOneShot(redDropSound, 0.5f);
+                    if (inventory.redCount == 0)
+                        inventory.pickupOrder--;
                 }
                 break;
             case ItemColour.GREEN:
@@ -52,6 +56,8 @@ public class DropItem : MonoBehaviour
                     inventory.greenHB.text = inventory.greenCount.ToString();
                     Instantiate(greenItem, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
                     audioSource.PlayOneShot(greenDropSound, 0.5f);
+                    if (inventory.greenCount == 0)
+                        inventory.pickupOrder--;
                 }
                 break;
             case ItemColour.YELLOW:
@@ -62,6 +68,8 @@ public class DropItem : MonoBehaviour
                     inventory.yellowHB.text = inventory.yellowCount.ToString();
                     Instantiate(yellowItem, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
                     audioSource.PlayOneShot(yellowDropSound, 0.5f);
+                    if (inventory.yellowCount == 0)
+                        inventory.pickupOrder--;
                 }
                 break;
             default: 

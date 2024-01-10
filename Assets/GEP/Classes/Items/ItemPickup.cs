@@ -14,22 +14,32 @@ public class ItemPickup : MonoBehaviour, IPickupable
 
     public void Pickup()
     {
-        Destroy(gameObject);
-        if (gameObject.tag == "Blue")
+        if (inventory.pickupOrder < 5)
         {
-            inventory.BlueItemPickup();
+            if (gameObject.tag == "Blue")
+            {
+                inventory.BlueItemPickup();
+            }
+            else if (gameObject.tag == "Red")
+            {
+                inventory.RedItemPickup();
+            }
+            else if (gameObject.tag == "Green")
+            {
+                inventory.GreenItemPickup();
+            }
+            else if (gameObject.tag == "Yellow")
+            {
+                inventory.YellowItemPickup();
+            }
+            else if (gameObject.tag == "Purple")
+            {
+                inventory.PurpleItemPickup();
+            }
+
+            Destroy(gameObject);
         }
-        else if (gameObject.tag == "Red")
-        {
-            inventory.RedItemPickup();
-        }
-        else if (gameObject.tag == "Green")
-        {
-            inventory.GreenItemPickup();
-        }
-        else if (gameObject.tag == "Yellow")
-        {
-            inventory.YellowItemPickup();
-        }
+        else
+            Debug.Log("INVENTORY FULL");
     }
 }
