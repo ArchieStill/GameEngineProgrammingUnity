@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SelectItem : MonoBehaviour
 {
-    public int selectedColour = 1;
+    public int selectedSlot = 1;
     public ItemText text;
 
     public GameObject[] Select1;
@@ -20,7 +20,7 @@ public class SelectItem : MonoBehaviour
 
     public void DropByButton()
     {
-        switch (selectedColour)
+        switch (selectedSlot)
         {
             case 1:
                 FindObjectOfType<DropItem>().dropItem(id: 1);
@@ -38,14 +38,16 @@ public class SelectItem : MonoBehaviour
                 break;
         }
     }
-
+    
+    // Don't need to touch these for inventory expansion, purely for which
+    // hotbar selection square is active!
     public void selectItem(int select)
     {
-        SelectedColour colour = (SelectedColour)select;
+        SelectedSlot slot = (SelectedSlot)select;
 
-        switch (colour) 
+        switch (slot) 
         {
-            case SelectedColour.BLUE:
+            case SelectedSlot.SLOT1:
                 HBBlueSelect.SetActive(true);
                 HBRedSelect.SetActive(false);
                 HBGreenSelect.SetActive(false);
@@ -56,7 +58,7 @@ public class SelectItem : MonoBehaviour
                 IVYellowSelect.SetActive(false);
                 text.textActive((int)ItemText.TextColour.BLUE);
                 break;
-            case SelectedColour.RED:
+            case SelectedSlot.SLOT2:
                 HBBlueSelect.SetActive(false);
                 HBRedSelect.SetActive(true);
                 HBGreenSelect.SetActive(false);
@@ -67,7 +69,7 @@ public class SelectItem : MonoBehaviour
                 IVYellowSelect.SetActive(false);
                 text.textActive((int)ItemText.TextColour.RED);
                 break;
-            case SelectedColour.GREEN:
+            case SelectedSlot.SLOT3:
                 HBBlueSelect.SetActive(false);
                 HBRedSelect.SetActive(false);
                 HBGreenSelect.SetActive(true);
@@ -78,7 +80,7 @@ public class SelectItem : MonoBehaviour
                 IVYellowSelect.SetActive(false);
                 text.textActive((int)ItemText.TextColour.GREEN);
                 break;
-            case SelectedColour.YELLOW:
+            case SelectedSlot.SLOT4:
                 HBBlueSelect.SetActive(false);
                 HBRedSelect.SetActive(false);
                 HBGreenSelect.SetActive(false);
@@ -96,18 +98,18 @@ public class SelectItem : MonoBehaviour
 
     public void LastItem()
     {
-        FindObjectOfType<SelectItem>().selectedColour--;
-        if (FindObjectOfType<SelectItem>().selectedColour < 1)
-            FindObjectOfType<SelectItem>().selectedColour = 1;
+        FindObjectOfType<SelectItem>().selectedSlot--;
+        if (FindObjectOfType<SelectItem>().selectedSlot < 1)
+            FindObjectOfType<SelectItem>().selectedSlot = 1;
     }
     public void NextItem()
     {
-        FindObjectOfType<SelectItem>().selectedColour++;
-        if (FindObjectOfType<SelectItem>().selectedColour > 4)
-            FindObjectOfType<SelectItem>().selectedColour = 4;
+        FindObjectOfType<SelectItem>().selectedSlot++;
+        if (FindObjectOfType<SelectItem>().selectedSlot > 4)
+            FindObjectOfType<SelectItem>().selectedSlot = 4;
     }
 
-    [Serializable] public enum SelectedColour { BLUE = 1, RED = 2, GREEN = 3, YELLOW = 4 }
+    [Serializable] public enum SelectedSlot { SLOT1 = 1, SLOT2 = 2, SLOT3 = 3, SLOT4 = 4 }
 
     // Initially in the player input script I had each of the Item1 Item2 etc inputs call
     // one of these functions, but I changed it so it calls a single function with a switch

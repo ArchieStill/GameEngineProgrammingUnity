@@ -37,7 +37,5 @@ public class ItemPickup : MonoBehaviour, IPickupable
 
         if (inventory.pickupOrder <= 4)
             Destroy(gameObject);
-        else
-            Debug.Log("INVENTORY FULL");
     }
 }

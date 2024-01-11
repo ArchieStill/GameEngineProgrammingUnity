@@ -36,7 +36,6 @@ public class Inventory : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(pickupOrder);
         if (pickupOrder < 0)
             pickupOrder = 0;
         if (pickupOrder == 5)

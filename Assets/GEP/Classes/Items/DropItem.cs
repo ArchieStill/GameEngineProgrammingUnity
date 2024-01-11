@@ -15,6 +15,8 @@ public class DropItem : MonoBehaviour
     public AudioClip greenDropSound;
     public GameObject yellowItem;
     public AudioClip yellowDropSound;
+    public GameObject purpleItem;
+    public AudioClip purpleDropSound;
 
     public GameObject player;
     public Inventory inventory;
@@ -72,10 +74,22 @@ public class DropItem : MonoBehaviour
                         inventory.pickupOrder--;
                 }
                 break;
+            case ItemColour.PURPLE:
+                if (inventory.purpleCount > 0)
+                {
+                    inventory.purpleCount--;
+                    inventory.purpleText.text = "x " + inventory.purpleCount.ToString();
+                    inventory.purpleHB.text = inventory.purpleCount.ToString();
+                    Instantiate(purpleItem, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
+                    audioSource.PlayOneShot(purpleDropSound, 0.5f);
+                    if (inventory.purpleCount == 0)
+                        inventory.pickupOrder--;
+                }
+                break;
             default: 
                 break;
         }
     }
 }
 
-[Serializable] public enum ItemColour {BLUE =  1, RED = 2, GREEN = 3, YELLOW = 4}
+[Serializable] public enum ItemColour {BLUE =  1, RED = 2, GREEN = 3, YELLOW = 4, PURPLE = 5}
