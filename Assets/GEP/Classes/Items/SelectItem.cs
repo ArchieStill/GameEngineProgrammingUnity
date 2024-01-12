@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SelectItem : MonoBehaviour
 {
+    [SerializeField] Inventory inventory;
     public int selectedSlot = 1;
     public ItemText text;
 
@@ -23,10 +24,10 @@ public class SelectItem : MonoBehaviour
         switch (selectedSlot)
         {
             case 1:
-                FindObjectOfType<DropItem>().dropItem(id: 1);
+                FindObjectOfType<DropItem>().dropItem(id: inventory.pickupOrder);
                 break;
             case 2:
-                FindObjectOfType<DropItem>().dropItem(id: 2);
+                FindObjectOfType<DropItem>().dropItem(id: inventory.pickupOrder);
                 break;
             case 3:
                 FindObjectOfType<DropItem>().dropItem(id: 3);

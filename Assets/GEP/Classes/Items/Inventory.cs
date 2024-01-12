@@ -55,6 +55,7 @@ public class Inventory : MonoBehaviour
             blueHB.text = blueCount.ToString();
         }
     }
+
     public void RedItemPickup()
     {
         if (redCount == 0)
