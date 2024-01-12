@@ -88,7 +88,7 @@ public class PlayerCharacterInput : MonoBehaviour
         }
     }
 
-    public void OnHBLeft()
+    /*public void OnHBLeft()
     {
         if (FindObjectOfType<StateManager>().IsPlayer)
         {
@@ -119,7 +119,7 @@ public class PlayerCharacterInput : MonoBehaviour
             FindObjectOfType<SelectItem>().NextItem();
             FindObjectOfType<SelectItem>().selectItem(FindObjectOfType<SelectItem>().selectedSlot);
         }
-    }
+    }*/
 
     public void MoveInput(Vector2 newMoveDirection)
     {

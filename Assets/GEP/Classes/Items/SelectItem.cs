@@ -24,10 +24,10 @@ public class SelectItem : MonoBehaviour
         switch (selectedSlot)
         {
             case 1:
-                FindObjectOfType<DropItem>().dropItem(id: inventory.pickupOrder);
+                FindObjectOfType<DropItem>().dropItem(id: 1);
                 break;
             case 2:
-                FindObjectOfType<DropItem>().dropItem(id: inventory.pickupOrder);
+                FindObjectOfType<DropItem>().dropItem(id: 2);
                 break;
             case 3:
                 FindObjectOfType<DropItem>().dropItem(id: 3);

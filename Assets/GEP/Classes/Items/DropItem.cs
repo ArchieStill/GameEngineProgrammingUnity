@@ -81,7 +81,7 @@ public class DropItem : MonoBehaviour
                     inventory.purpleText.text = "x " + inventory.purpleCount.ToString();
                     inventory.purpleHB.text = inventory.purpleCount.ToString();
                     Instantiate(purpleItem, player.transform.position + transform.forward + new Vector3(0, 2, 0), Quaternion.identity);
-                    audioSource.PlayOneShot(purpleDropSound, 0.5f);
+                    // audioSource.PlayOneShot(purpleDropSound, 0.5f);
                     if (inventory.purpleCount == 0)
                         inventory.pickupOrder--;
                 }

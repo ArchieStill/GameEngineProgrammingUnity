@@ -8,6 +8,7 @@ public class Inventory : MonoBehaviour
 {
     public AudioSource audioSource;
     public int pickupOrder = 0;
+    public GameObject full;
 
     public int blueCount = 0;
     public TMP_Text blueText;
@@ -32,7 +33,6 @@ public class Inventory : MonoBehaviour
     public int purpleCount = 0;
     public TMP_Text purpleText;
     public TMP_Text purpleHB;
-    public AudioClip purplePickup;
 
     private void Update()
     {
@@ -40,6 +40,11 @@ public class Inventory : MonoBehaviour
             pickupOrder = 0;
         if (pickupOrder == 5)
             pickupOrder = 4;
+
+        if (pickupOrder >= 4)
+            full.SetActive(true);
+        else
+            full.SetActive(false);
     }
 
     public void BlueItemPickup()
