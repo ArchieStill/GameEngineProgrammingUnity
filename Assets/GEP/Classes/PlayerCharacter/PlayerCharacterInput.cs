@@ -55,7 +55,7 @@ public class PlayerCharacterInput : MonoBehaviour
         FindObjectOfType<SelectItem>().DropByButton();
     }
 
-    public void OnItem1()
+    /*public void OnItem1()
     {
         if (FindObjectOfType<StateManager>().IsPlayer)
         {
@@ -88,7 +88,7 @@ public class PlayerCharacterInput : MonoBehaviour
         }
     }
 
-    /*public void OnHBLeft()
+    public void OnHBLeft()
     {
         if (FindObjectOfType<StateManager>().IsPlayer)
         {

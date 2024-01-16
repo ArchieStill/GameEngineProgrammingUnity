@@ -12,27 +12,32 @@ public class Inventory : MonoBehaviour
 
     public int blueCount = 0;
     public TMP_Text blueText;
-    public TMP_Text blueHB;
+    // public TMP_Text blueHB;
     public AudioClip bluePickup;
 
     public int redCount = 0;
     public TMP_Text redText;
-    public TMP_Text redHB;
+    // public TMP_Text redHB;
     public AudioClip redPickup;
 
     public int greenCount = 0;
     public TMP_Text greenText;
-    public TMP_Text greenHB;
+    // public TMP_Text greenHB;
     public AudioClip greenPickup;
 
     public int yellowCount = 0;
     public TMP_Text yellowText;
-    public TMP_Text yellowHB;
+    // public TMP_Text yellowHB;
     public AudioClip yellowPickup;
 
     public int purpleCount = 0;
     public TMP_Text purpleText;
-    public TMP_Text purpleHB;
+    // public TMP_Text purpleHB;
+    public AudioClip purplePickup;
+
+    public int orangeCount = 0;
+    public TMP_Text orangeText;
+    public AudioClip orangePickup;
 
     private void Update()
     {
@@ -57,7 +62,7 @@ public class Inventory : MonoBehaviour
             audioSource.PlayOneShot(bluePickup, 0.5f);
             blueCount++;
             blueText.text = "x " + blueCount.ToString();
-            blueHB.text = blueCount.ToString();
+            // blueHB.text = blueCount.ToString();
         }
     }
 
@@ -71,7 +76,7 @@ public class Inventory : MonoBehaviour
             audioSource.PlayOneShot(redPickup, 0.5f);
             redCount++;
             redText.text = "x " + redCount.ToString();
-            redHB.text = redCount.ToString();
+            // redHB.text = redCount.ToString();
         }
     }
     public void GreenItemPickup()
@@ -84,7 +89,7 @@ public class Inventory : MonoBehaviour
             audioSource.PlayOneShot(greenPickup, 0.5f);
             greenCount++;
             greenText.text = "x " + greenCount.ToString();
-            greenHB.text = greenCount.ToString();
+            // greenHB.text = greenCount.ToString();
         }
     }
     public void YellowItemPickup()
@@ -97,7 +102,7 @@ public class Inventory : MonoBehaviour
             audioSource.PlayOneShot(yellowPickup, 0.5f);
             yellowCount++;
             yellowText.text = "x " + yellowCount.ToString();
-            yellowHB.text = yellowCount.ToString();
+            // yellowHB.text = yellowCount.ToString();
         }
     }
     public void PurpleItemPickup()
@@ -107,9 +112,22 @@ public class Inventory : MonoBehaviour
                 pickupOrder++;
         if (pickupOrder < 5)
         {
+            audioSource.PlayOneShot(purplePickup, 0.5f);
             purpleCount++;
             purpleText.text = "x " + purpleCount.ToString();
-            purpleHB.text = purpleCount.ToString();
+            // purpleHB.text = purpleCount.ToString();
+        }
+    }
+    public void OrangeItemPickup()
+    {
+        if (orangeCount == 0)
+            if (pickupOrder < 5)
+                pickupOrder++;
+        if (pickupOrder < 5)
+        {
+            audioSource.PlayOneShot(orangePickup, 0.5f);
+            orangeCount++;
+            orangeText.text = "x " + orangeCount.ToString();
         }
     }
 }

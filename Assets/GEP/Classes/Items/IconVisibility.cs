@@ -10,6 +10,7 @@ public class IconVisibility : MonoBehaviour
     public GameObject[] greenIcons;
     public GameObject[] yellowIcons;
     public GameObject[] purpleIcons;
+    public GameObject[] orangeIcons;
 
     void Update()
     {
@@ -18,22 +19,23 @@ public class IconVisibility : MonoBehaviour
         GreenCheck();
         YellowCheck();
         PurpleCheck();
+        OrangeCheck();
     }
 
     public void BlueCheck()
     {
         if (inventory.blueCount > 0)
         {
-            foreach (GameObject blue in blueIcons)
+            foreach (GameObject icons in blueIcons)
             {
-                blue.SetActive(true);
+                icons.SetActive(true);
             }
         }
         else
         {
-            foreach (GameObject blue in blueIcons)
+            foreach (GameObject icons in blueIcons)
             {
-                blue.SetActive(false);
+                icons.SetActive(false);
             }
         }
     }
@@ -41,16 +43,16 @@ public class IconVisibility : MonoBehaviour
     {
         if (inventory.redCount > 0)
         {
-            foreach (GameObject red in redIcons)
+            foreach (GameObject icons in redIcons)
             {
-                red.SetActive(true);
+                icons.SetActive(true);
             }
         }
         else
         {
-            foreach (GameObject red in redIcons)
+            foreach (GameObject icons in redIcons)
             {
-                red.SetActive(false);
+                icons.SetActive(false);
             }
         }
     }
@@ -58,16 +60,16 @@ public class IconVisibility : MonoBehaviour
     {
         if (inventory.greenCount > 0)
         {
-            foreach (GameObject green in greenIcons)
+            foreach (GameObject icons in greenIcons)
             {
-                green.SetActive(true);
+                icons.SetActive(true);
             }
         }
         else
         {
-            foreach (GameObject green in greenIcons)
+            foreach (GameObject icons in greenIcons)
             {
-                green.SetActive(false);
+                icons.SetActive(false);
             }
         }
     }
@@ -75,16 +77,16 @@ public class IconVisibility : MonoBehaviour
     {
         if (inventory.yellowCount > 0)
         {
-            foreach (GameObject yellow in yellowIcons)
+            foreach (GameObject icons in yellowIcons)
             {
-                yellow.SetActive(true);
+                icons.SetActive(true);
             }
         }
         else
         {
-            foreach (GameObject yellow in yellowIcons)
+            foreach (GameObject icons in yellowIcons)
             {
-                yellow.SetActive(false);
+                icons.SetActive(false);
             }
         }
     }
@@ -92,16 +94,33 @@ public class IconVisibility : MonoBehaviour
     {
         if (inventory.purpleCount > 0)
         {
-            foreach (GameObject purple in purpleIcons)
+            foreach (GameObject icons in purpleIcons)
             {
-                purple.SetActive(true);
+                icons.SetActive(true);
             }
         }
         else
         {
-            foreach (GameObject purple in purpleIcons)
+            foreach (GameObject icons in purpleIcons)
             {
-                purple.SetActive(false);
+                icons.SetActive(false);
+            }
+        }
+    }
+    public void OrangeCheck()
+    {
+        if (inventory.orangeCount > 0)
+        {
+            foreach (GameObject icons in orangeIcons)
+            {
+                icons.SetActive(true);
+            }
+        }
+        else
+        {
+            foreach (GameObject icons in orangeIcons)
+            {
+                icons.SetActive(false);
             }
         }
     }

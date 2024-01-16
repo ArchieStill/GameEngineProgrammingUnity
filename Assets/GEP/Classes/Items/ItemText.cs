@@ -9,6 +9,8 @@ public class ItemText : MonoBehaviour
     public GameObject redText;
     public GameObject greenText;
     public GameObject yellowText;
+    public GameObject purpleText;
+    public GameObject orangeText;
 
     public void textActive(int id)
     {
@@ -18,27 +20,21 @@ public class ItemText : MonoBehaviour
         {
             case TextColour.BLUE:
                 blueText.SetActive(true);
-                redText.SetActive(false);
-                greenText.SetActive(false);
-                yellowText.SetActive(false);
                 break;
             case TextColour.RED:
-                blueText.SetActive(false);
                 redText.SetActive(true);
-                greenText.SetActive(false);
-                yellowText.SetActive(false);
                 break;
             case TextColour.GREEN:
-                blueText.SetActive(false);
-                redText.SetActive(false);
                 greenText.SetActive(true);
-                yellowText.SetActive(false);
                 break;
             case TextColour.YELLOW:
-                blueText.SetActive(false);
-                redText.SetActive(false);
-                greenText.SetActive(false);
                 yellowText.SetActive(true);
+                break;
+            case TextColour.PURPLE:
+                purpleText.SetActive(true);
+                break;
+            case TextColour.ORANGE:
+                orangeText.SetActive(true);
                 break;
         }
     }
@@ -61,8 +57,14 @@ public class ItemText : MonoBehaviour
             case TextColour.YELLOW:
                 yellowText.SetActive(false);
                 break;
+            case TextColour.PURPLE:
+                purpleText.SetActive(false);
+                break;
+            case TextColour.ORANGE:
+                orangeText.SetActive(false);
+                break;
         }
     }
 
-    [Serializable] public enum TextColour { BLUE = 1, RED = 2, GREEN = 3, YELLOW = 4 }
+    [Serializable] public enum TextColour { BLUE = 1, RED = 2, GREEN = 3, YELLOW = 4, PURPLE = 5, ORANGE = 6 }
 }

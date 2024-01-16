@@ -14,6 +14,7 @@ public class StateManager : MonoBehaviour
     public AudioClip close;
     public GameObject playerInstruct;
     public GameObject inventoryInstruct;
+    public ItemText itemText;
 
     void Start()
     {
@@ -38,6 +39,12 @@ public class StateManager : MonoBehaviour
             UnityEngine.Cursor.lockState = CursorLockMode.None;
             playerInstruct.SetActive(false);
             inventoryInstruct.SetActive(true);
+            itemText.blueText.SetActive(false);
+            itemText.redText.SetActive(false);
+            itemText.greenText.SetActive(false);
+            itemText.yellowText.SetActive(false);
+            itemText.purpleText.SetActive(false);
+            itemText.orangeText.SetActive(false);
         }
     }
 }
